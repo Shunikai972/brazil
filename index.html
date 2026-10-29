@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=1, user-scalable=no" />
+    <meta name="theme-color" content="#14060c" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="description" content="tenho uma pergunta muito importante pra você 💌 (abre com som)" />
+    <meta property="og:title" content="tenho uma pergunta pra você 💌" />
+    <meta property="og:description" content="abre com o som ligado 🔊" />
+    <title>uma pergunta importante ❤️</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💌</text></svg>" />
+  </head>
+  <body>
+    <div id="app">
+      <div id="shake">
+        <main id="stage" aria-live="polite"></main>
+        <canvas id="fx" aria-hidden="true"></canvas>
+      </div>
+      <div id="transition" aria-hidden="true"></div>
+      <div id="flash" aria-hidden="true"></div>
+      <div id="grain" aria-hidden="true"></div>
+      <div id="loader" role="status">
+        <svg class="loader-heart" viewBox="-60 -55 120 110" aria-hidden="true">
+          <path d="M0,-18 C0,-48 -48,-48 -48,-18 C-48,12 0,26 0,50 C0,26 48,12 48,-18 C48,-48 0,-48 0,-18Z" />
+        </svg>
+        <p class="loader-pct">0%</p>
+      </div>
+      <div id="ui">
+        <button id="btn-sound" class="ui-btn" type="button" aria-label="Som ligado" aria-pressed="false">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path class="spk" d="M5 12h5l7-6v20l-7-6H5z" /><path class="w1" d="M21 11c2 2.6 2 7.4 0 10" /><path class="w2" d="M24.5 7.5c4.2 4.6 4.2 12.4 0 17" /><path class="x" d="M21 12l8 8M29 12l-8 8" /></svg>
+        </button>
+        <button id="btn-motion" class="ui-btn" type="button" aria-label="Reduzir movimento" aria-pressed="false">
+          <svg viewBox="0 0 32 32" aria-hidden="true"><path class="wave" d="M3 16c3-6 6-6 9 0s6 6 9 0 6-6 8-2" /><path class="flat" d="M3 16h26" /></svg>
+        </button>
+      </div>
+    </div>
+    <noscript>Ative o JavaScript para ver a surpresa ❤️</noscript>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

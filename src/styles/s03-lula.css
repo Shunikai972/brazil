@@ -1,0 +1,261 @@
+.s-lula {
+  background: #050304;
+}
+.lu-burst {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 240vmax;
+  height: 240vmax;
+  margin: -120vmax 0 0 -120vmax;
+  opacity: 0;
+  background: repeating-conic-gradient(from 0deg, #ffdf00 0deg 9deg, #00a845 9deg 18deg);
+  animation: spin 14s linear infinite;
+}
+.lu-burst::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0) 22%, rgba(0, 0, 0, 0) 60%, rgba(0, 0, 0, 0.45));
+}
+.reduced .lu-burst {
+  animation-duration: 60s;
+}
+.lu-vignette {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 90% at 50% 50%, transparent 50%, rgba(0, 0, 0, 0.6));
+}
+.lu-credits {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  text-align: center;
+  padding: 0 6vw;
+}
+.lu-small {
+  margin: 0 0 3vmin;
+  font: italic 400 clamp(16px, 4.4vmin, 30px) / 1.2 var(--f-serif);
+  color: rgba(247, 231, 212, 0.75);
+  letter-spacing: 0.02em;
+}
+.lu-name {
+  margin: 0;
+  font: 400 clamp(36px, 10vmin, 110px) / 1.05 var(--f-serif);
+  color: #f0c35a;
+  text-shadow: 0 0 3vmin rgba(240, 195, 90, 0.45);
+}
+.lu-name .ch {
+  background: linear-gradient(180deg, #fff3c4 0%, #f0c35a 50%, #b07a1c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.lu-actors {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.lu-actors .lula {
+  left: 0;
+  top: 0;
+}
+.lu-army {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+}
+.lu-soldier {
+  position: absolute;
+  transform-origin: 50% 100%;
+  filter: drop-shadow(0 0.6vmin 0 rgba(0, 0, 0, 0.35));
+}
+.lu-soldier img {
+  height: 100%;
+  width: auto;
+  display: block;
+}
+.lu-soldier.h1 img {
+  filter: hue-rotate(90deg) saturate(1.6);
+}
+.lu-soldier.h2 img {
+  filter: hue-rotate(200deg) saturate(1.8);
+}
+.lu-soldier.h3 img {
+  filter: invert(0.9) hue-rotate(180deg);
+}
+.lu-army.rgb .lu-soldier {
+  filter: drop-shadow(-0.5vmin 0 0 rgba(255, 0, 80, 0.7)) drop-shadow(0.5vmin 0 0 rgba(0, 220, 255, 0.7));
+}
+.lu-glasses {
+  position: absolute;
+  left: 22%;
+  right: 22%;
+  top: 8.5%;
+  visibility: hidden;
+}
+.lu-glasses svg {
+  display: block;
+  width: 100%;
+}
+.s-lula.frozen .lu-actors,
+.s-lula.frozen .lu-burst {
+  filter: sepia(0.85) contrast(1.15) brightness(0.85);
+}
+.lu-freeze {
+  position: absolute;
+  left: 5vw;
+  right: 5vw;
+  bottom: calc(10vh + var(--safe-b));
+  visibility: hidden;
+  text-align: center;
+}
+.lu-ff {
+  margin: 0 0 1.5vmin;
+  font: italic 400 clamp(16px, 4.2vmin, 28px) / 1 var(--f-serif);
+  color: #fff;
+  text-shadow: 0 2px 6px #000;
+}
+.lu-sub {
+  display: inline;
+  margin: 0;
+  padding: 0.15em 0.35em;
+  font: 700 clamp(18px, 5vmin, 38px) / 1.45 var(--f-ui);
+  color: var(--br-yellow);
+  background: rgba(0, 0, 0, 0.72);
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.lu-caption {
+  position: absolute;
+  left: 4vw;
+  right: 4vw;
+  top: 12vh;
+  margin: 0;
+  visibility: hidden;
+  text-align: center;
+  font-size: clamp(32px, 10vmin, 96px);
+  color: var(--br-yellow);
+}
+.lu-doc {
+  position: absolute;
+  left: 50%;
+  top: 9vh;
+  width: min(88vw, 520px);
+  margin-left: calc(min(88vw, 520px) / -2);
+  visibility: hidden;
+  padding: 4vmin 4.5vmin 3.5vmin;
+  font: 400 clamp(12px, 3vmin, 17px) / 1.35 var(--f-ui);
+  color: #2a2420;
+  background:
+    linear-gradient(90deg, rgba(0, 0, 0, 0.04) 1px, transparent 1px) 0 0 / 18px 100%,
+    linear-gradient(#fdfaf2, #f1e9d6);
+  box-shadow: 0 2vmin 5vmin rgba(0, 0, 0, 0.5);
+}
+.lu-doc header {
+  display: grid;
+  justify-items: center;
+  text-align: center;
+  border-bottom: 2px solid #2a2420;
+  padding-bottom: 1.6vmin;
+  margin-bottom: 1.6vmin;
+}
+.lu-doc .crest {
+  font-size: 2.2em;
+  line-height: 1;
+  color: #0c6b3a;
+}
+.lu-doc header b {
+  font: 400 1.5em/1.1 var(--f-news);
+  letter-spacing: 0.06em;
+}
+.lu-doc header small {
+  font-size: 0.8em;
+  opacity: 0.7;
+}
+.lu-doc dl {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.5em 1em;
+  margin: 0;
+}
+.lu-doc dt {
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.78em;
+  letter-spacing: 0.06em;
+  padding-top: 0.15em;
+}
+.lu-doc dd {
+  margin: 0;
+  border-bottom: 1px dotted rgba(0, 0, 0, 0.35);
+}
+.lu-doc .scrawl {
+  font: 400 1.6em/1 var(--f-script);
+  color: #1d3fae;
+}
+.lu-doc footer {
+  margin-top: 1.8vmin;
+  font-size: 0.85em;
+  opacity: 0.75;
+}
+.lu-doc footer i {
+  font: 400 1.8em/1 var(--f-script);
+  color: #1d3fae;
+}
+.lu-stamp {
+  position: absolute;
+  left: 50%;
+  top: calc(9vh + min(26vh, 56vmin));
+  translate: -50% 0;
+  visibility: hidden;
+  padding: 0.25em 0.45em 0.2em;
+  font: 400 clamp(30px, 9vmin, 84px) / 0.95 var(--f-news);
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: #d0021b;
+  border: 0.12em solid #d0021b;
+  border-radius: 0.12em;
+  mix-blend-mode: multiply;
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.7'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -2.2 1.7'/%3E%3C/filter%3E%3Crect width='120' height='120' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+.lu-stamp span {
+  color: #0c8a3e;
+}
+.lu-foot {
+  position: absolute;
+  z-index: 3;
+  left: 4vw;
+  right: 4vw;
+  padding: 0.35em 0.4em;
+  background: rgba(10, 10, 10, 0.82);
+  bottom: calc(3vh + var(--safe-b));
+  margin: 0;
+  visibility: hidden;
+  text-align: center;
+  font: 400 clamp(18px, 5vmin, 44px) / 1 var(--f-news);
+  color: #fff;
+  text-shadow: 0.08em 0.08em 0 #111;
+}
+.lu-foot small {
+  display: block;
+  margin-top: 0.4em;
+  font: 600 clamp(11px, 2.6vmin, 15px) / 1 var(--f-ui);
+  text-shadow: none;
+  opacity: 0.85;
+}
+.lu-frame {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border: 0 solid #000;
+  transition: border-width 0.1s;
+}
+.s-lula.frozen .lu-frame {
+  border-width: 2.4vmin;
+  box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.4);
+}

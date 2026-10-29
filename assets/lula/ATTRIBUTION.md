@@ -1,0 +1,12 @@
+# Lula photos — sources and licences
+
+Cut-outs (background removed, white outline added) derived from the files below.
+Derivatives of CC BY-SA files are shared under the same licence.
+
+- `jersey-full.webp` (+ `head-` / `face-` crops) — [06.06.2026 - Presidente Lula com camisa da Seleção Brasileir - 55319796941.jpg](https://commons.wikimedia.org/wiki/File:06.06.2026_-_Presidente_Lula_com_camisa_da_Sele%C3%A7%C3%A3o_Brasileir_-_55319796941.jpg) — Lula Oficial — CC BY-SA 4.0
+- `jersey-thumbs.webp` (+ `head-` / `face-` crops) — [06.06.2026 - Presidente Lula com camisa da Seleção Brasileir.jpg](https://commons.wikimedia.org/wiki/File:06.06.2026_-_Presidente_Lula_com_camisa_da_Sele%C3%A7%C3%A3o_Brasileir.jpg) — Lula Oficial — CC BY-SA 4.0
+- `official-body.webp` (+ `head-` / `face-` crops) — [Foto oficial de Luiz Inácio Lula da Silva (corpo).jpg](https://commons.wikimedia.org/wiki/File:Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_(corpo).jpg) — Palácio do Planalto from Brasilia, Brasil — CC BY 2.0
+- `official-face.webp` (+ `head-` / `face-` crops) — [Foto oficial de Luiz Inácio Lula da Silva (rosto).jpg](https://commons.wikimedia.org/wiki/File:Foto_oficial_de_Luiz_In%C3%A1cio_Lula_da_Silva_(rosto).jpg) — Palácio do Planalto from Brasilia, Brasil — CC BY 2.0
+- `laugh.webp` (+ `head-` / `face-` crops) — [11.07.2023 - Conversa com o Presidente - 53038660439.jpg](https://commons.wikimedia.org/wiki/File:11.07.2023_-_Conversa_com_o_Presidente_-_53038660439.jpg) — Palácio do Planalto — CC BY 2.0
+- `cap-thumb.webp` (+ `head-` / `face-` crops) — [12.09.2024 - Cerimônia de lançamento da Rede Alyne de Cuidado Integral a Gestantes e Bebês (53990543049).jpg](https://commons.wikimedia.org/wiki/File:12.09.2024_-_Cerim%C3%B4nia_de_lan%C3%A7amento_da_Rede_Alyne_de_Cuidado_Integral_a_Gestantes_e_Beb%C3%AAs_(53990543049).jpg) — Lula Oficial — CC BY-SA 2.0
+- `fists.webp` (+ `head-` / `face-` crops) — [04.07.2023 - Cerimônia de assinatura do Protocolo de Intenções Itaipu MEC UNILA para retomada das obras do campus da Universidade Federal da Integração Latino-Americana (UNILA), e de posse da nova reitora (53025407988).jpg](https://commons.wikimedia.org/wiki/File:04.07.2023_-_Cerim%C3%B4nia_de_assinatura_do_Protocolo_de_Inten%C3%A7%C3%B5es_Itaipu_MEC_UNILA_para_retomada_das_obras_do_campus_da_Universidade_Federal_da_Integra%C3%A7%C3%A3o_Latino-Americana_(UNILA),_e_de_posse_da_nova_reitora_(53025407988).jpg) — Palácio do Planalto from Brasilia, Brasil — CC BY 2.0

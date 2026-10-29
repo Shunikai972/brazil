@@ -1,0 +1,8 @@
+node_modules/
+dist/
+.cache/
+# original, full-size photos (the optimised copies live in assets/couple/)
+photos/
+*.log
+.DS_Store
+Thumbs.db

@@ -1,0 +1,438 @@
+.s-breaking {
+  background: #8a0014;
+  transform-origin: 50% 50%;
+}
+.bn-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(70% 55% at 50% 45%, #e0001f 0%, #a8001a 55%, #4a000b 100%);
+}
+.bn-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.22;
+  background-image: radial-gradient(circle, #000 1.2px, transparent 1.6px);
+  background-size: 7px 7px;
+  mask-image: radial-gradient(80% 70% at 50% 50%, transparent 30%, #000 100%);
+  -webkit-mask-image: radial-gradient(80% 70% at 50% 50%, transparent 30%, #000 100%);
+}
+.bn-beams {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+.bn-beams .beam {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 260vmax;
+  height: 260vmax;
+  margin: -130vmax 0 0 -130vmax;
+  background: conic-gradient(from 0deg, rgba(255, 60, 60, 0.42) 0deg, transparent 28deg, transparent 180deg, rgba(255, 80, 80, 0.38) 180deg, transparent 208deg);
+  animation: spin 1.6s linear infinite;
+}
+.bn-beams .b2 {
+  background: conic-gradient(from 90deg, rgba(80, 120, 255, 0.28) 0deg, transparent 22deg, transparent 180deg, rgba(80, 120, 255, 0.24) 180deg, transparent 202deg);
+  animation-duration: 2.3s;
+  animation-direction: reverse;
+}
+.reduced .bn-beams .beam {
+  animation-duration: 8s;
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.bn-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+.bn-scan {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.13) 0 1px, transparent 1px 3px);
+  mix-blend-mode: multiply;
+}
+
+.bn-headline {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  padding-bottom: 6vh;
+}
+.bn-title {
+  margin: 0;
+  display: grid;
+  justify-items: center;
+  font: 400 clamp(64px, 21vmin, 230px) / 0.86 var(--f-news);
+  color: #fff;
+  letter-spacing: 0.01em;
+  text-shadow: 0.05em 0.05em 0 #2b0006;
+}
+.bn-l2 {
+  color: var(--br-yellow);
+  font-size: 1.22em;
+}
+.bn-siren {
+  position: absolute;
+  top: calc(50% - 30vmin);
+  width: 15vmin;
+  height: 13vmin;
+  border-radius: 7.5vmin 7.5vmin 1vmin 1vmin;
+  background: radial-gradient(circle at 40% 35%, #ffb3b3, #ff1a1a 45%, #8a0000 100%);
+  box-shadow: 0 0 6vmin 2vmin rgba(255, 30, 30, 0.75);
+  animation: siren 0.5s steps(2) infinite;
+}
+.bn-siren::after {
+  content: '';
+  position: absolute;
+  left: -15%;
+  right: -15%;
+  bottom: -2.4vmin;
+  height: 3vmin;
+  border-radius: 0.6vmin;
+  background: linear-gradient(#444, #111);
+}
+.bn-siren.left {
+  left: calc(50% - 46vmin);
+}
+.bn-siren.right {
+  right: calc(50% - 46vmin);
+  animation-delay: -0.25s;
+}
+.is-portrait .bn-siren {
+  top: 15%;
+}
+.is-portrait .bn-siren.left {
+  left: 20vw;
+}
+.is-portrait .bn-siren.right {
+  right: 20vw;
+}
+@keyframes siren {
+  0% { filter: brightness(1.3); box-shadow: 0 0 7vmin 3vmin rgba(255, 30, 30, 0.85); }
+  100% { filter: brightness(0.7); box-shadow: 0 0 2vmin rgba(255, 30, 30, 0.3); }
+}
+.reduced .bn-siren {
+  animation-duration: 1.6s;
+}
+.bn-sub {
+  display: grid;
+  justify-items: center;
+  gap: 0.6vmin;
+  margin-top: 3vmin;
+}
+.bn-sub .bar {
+  margin: 0;
+  padding: 0.12em 0.4em 0.08em;
+  font: 400 clamp(26px, 7.4vmin, 80px) / 1 var(--f-news);
+  color: #111;
+  background: #fff;
+  transform: skewX(-8deg);
+  box-shadow: 0.12em 0.12em 0 #2b0006;
+}
+.bn-sub .b2 {
+  background: var(--br-yellow);
+  font-size: clamp(32px, 9.4vmin, 100px);
+}
+.bn-drill {
+  position: relative;
+  margin: 3.5vmin 0 0;
+  font: 400 clamp(22px, 6.4vmin, 64px) / 1 var(--f-news);
+  letter-spacing: 0.06em;
+  color: #fff;
+  padding: 0.18em 0.5em;
+  background: #111;
+}
+.bn-drill.glitch::before,
+.bn-drill.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  inset: 0;
+  padding: inherit;
+  background: #111;
+  overflow: hidden;
+}
+.bn-drill.glitch::before {
+  color: #ff2b5e;
+  transform: translate(-3px, 0);
+  clip-path: inset(0 0 55% 0);
+  animation: glitchA 0.35s steps(2) infinite;
+}
+.bn-drill.glitch::after {
+  color: #30e6ff;
+  transform: translate(3px, 0);
+  clip-path: inset(55% 0 0 0);
+  animation: glitchB 0.42s steps(2) infinite;
+}
+@keyframes glitchA {
+  0% { clip-path: inset(0 0 60% 0); transform: translate(-4px, -1px); }
+  50% { clip-path: inset(20% 0 40% 0); transform: translate(3px, 1px); }
+  100% { clip-path: inset(70% 0 5% 0); transform: translate(-2px, 0); }
+}
+@keyframes glitchB {
+  0% { clip-path: inset(50% 0 10% 0); transform: translate(4px, 1px); }
+  50% { clip-path: inset(5% 0 70% 0); transform: translate(-3px, 0); }
+  100% { clip-path: inset(30% 0 30% 0); transform: translate(2px, -1px); }
+}
+.reduced .glitch::before,
+.reduced .glitch::after {
+  animation: none !important;
+}
+
+/* channel ident: TV CORAÇÃO / PLANTÃO */
+.bn-ident {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+  visibility: hidden;
+}
+.bn-globe {
+  position: absolute;
+  width: 46vmin;
+  height: 46vmin;
+  left: -23vmin;
+  top: -30vmin;
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #9fd8ff 0%, #1d6fd6 35%, #0a2d7a 70%, #04123a 100%);
+  box-shadow: 0 0 10vmin rgba(60, 160, 255, 0.6), inset -3vmin -3vmin 6vmin rgba(0, 0, 0, 0.5);
+}
+.bn-ring {
+  position: absolute;
+  inset: -8%;
+  border-radius: 50%;
+  border: 1.2vmin solid rgba(255, 223, 0, 0.9);
+  border-left-color: transparent;
+  border-right-color: transparent;
+  transform: rotateX(70deg);
+  animation: ring 1.2s linear infinite;
+}
+.bn-ring.r2 {
+  inset: -16%;
+  border-color: rgba(255, 255, 255, 0.7);
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  animation-duration: 1.8s;
+  animation-direction: reverse;
+}
+@keyframes ring {
+  from { transform: rotateX(70deg) rotateZ(0deg); }
+  to { transform: rotateX(70deg) rotateZ(360deg); }
+}
+.bn-shine {
+  position: absolute;
+  inset: 8% 30% 55% 12%;
+  border-radius: 50%;
+  background: radial-gradient(closest-side, rgba(255, 255, 255, 0.75), transparent);
+  transform: rotate(-30deg);
+}
+.bn-plantao {
+  position: absolute;
+  left: 50%;
+  top: 9vmin;
+  margin: 0;
+  translate: -50% 0;
+  padding: 0.05em 0.4em;
+  font: 400 clamp(46px, 15vmin, 150px) / 1 var(--f-news);
+  letter-spacing: 0.04em;
+  color: #fff;
+  background: linear-gradient(180deg, #ff2b2b, #b30000);
+  box-shadow: 0 0.6vmin 0 #4a0000, 0 0 5vmin rgba(255, 0, 0, 0.5);
+  white-space: nowrap;
+}
+.bn-channel {
+  position: absolute;
+  left: 50%;
+  top: 27vmin;
+  translate: -50% 0;
+  margin: 0;
+  font: 400 clamp(18px, 5vmin, 48px) / 1 var(--f-news);
+  letter-spacing: 0.2em;
+  color: #fff;
+  white-space: nowrap;
+}
+.bn-channel b {
+  color: var(--br-yellow);
+  font-weight: 400;
+}
+
+.bn-label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  visibility: hidden;
+  padding: 0.25em 0.6em 0.3em;
+  font: 400 clamp(14px, 3.6vmin, 30px) / 1 var(--f-news);
+  letter-spacing: 0.05em;
+  color: #111;
+  background: #fff;
+  box-shadow: 0.15em 0.15em 0 #111;
+  translate: -50% calc(-100% - 2.4vmin);
+  white-space: nowrap;
+}
+.bn-label span {
+  display: block;
+  font: 400 0.62em/1.2 var(--f-ui);
+  font-weight: 700;
+  letter-spacing: 0;
+}
+.bn-label::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -2.4vmin;
+  width: 2px;
+  height: 2.4vmin;
+  background: #fff;
+}
+.bn-label.br {
+  background: var(--br-yellow);
+}
+.bn-fact {
+  position: absolute;
+  right: 4vw;
+  bottom: calc(15vmin + var(--safe-b));
+  width: min(52vw, 360px);
+  visibility: hidden;
+  padding: 0.7em 0.9em;
+  font: 600 clamp(13px, 3.2vmin, 19px) / 1.25 var(--f-ui);
+  color: #111;
+  background: #fffbe6;
+  box-shadow: 0.3em 0.3em 0 #111;
+}
+.is-portrait .bn-fact {
+  left: 6vw;
+  right: 6vw;
+  width: auto;
+  bottom: calc(18vmin + var(--safe-b));
+}
+.bn-fact b {
+  display: block;
+  margin-bottom: 0.3em;
+  font: 400 1.25em/1 var(--f-news);
+  letter-spacing: 0.06em;
+  color: var(--rouge);
+}
+.bn-fact small {
+  font-weight: 500;
+  opacity: 0.75;
+}
+.bn-newflag {
+  position: absolute;
+  left: 50%;
+  bottom: calc(15vmin + var(--safe-b));
+  translate: -50% 0;
+  visibility: hidden;
+  text-align: center;
+  white-space: nowrap;
+}
+.bn-newflag b {
+  display: block;
+  padding: 0.15em 0.5em;
+  font: 400 clamp(22px, 6.4vmin, 60px) / 1 var(--f-news);
+  color: #111;
+  background: var(--br-yellow);
+  box-shadow: 0.12em 0.12em 0 #111;
+}
+.bn-newflag small {
+  display: inline-block;
+  margin-top: 0.6em;
+  font: 600 clamp(11px, 2.8vmin, 16px) / 1 var(--f-ui);
+  color: #fff;
+}
+
+.bn-hud {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+.bn-live {
+  position: absolute;
+  top: calc(var(--safe-t) + 14px);
+  left: calc(var(--safe-l) + 14px);
+  padding: 0.35em 0.65em;
+  font: 400 clamp(13px, 3.2vmin, 20px) / 1 var(--f-news);
+  letter-spacing: 0.08em;
+  color: #fff;
+  background: #d10019;
+  border-radius: 3px;
+}
+.bn-live i {
+  display: inline-block;
+  width: 0.55em;
+  height: 0.55em;
+  margin-right: 0.4em;
+  border-radius: 50%;
+  background: #fff;
+  animation: blink 1s steps(2) infinite;
+}
+@keyframes blink {
+  50% { opacity: 0; }
+}
+.bn-bug {
+  position: absolute;
+  top: calc(var(--safe-t) + 14px);
+  left: calc(var(--safe-l) + 14px + clamp(80px, 20vmin, 120px));
+  font: 400 clamp(14px, 3.4vmin, 22px) / 1.25 var(--f-news);
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0.05em;
+}
+.bn-bug b {
+  color: var(--br-yellow);
+  margin-left: 0.15em;
+  font-weight: 400;
+}
+.bn-ticker {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: var(--safe-b);
+  height: clamp(36px, 9vmin, 56px);
+  display: flex;
+  background: #fff;
+  box-shadow: 0 -0.5vmin 0 #111;
+}
+.bn-urgente {
+  flex: none;
+  display: grid;
+  place-items: center;
+  padding: 0 0.8em;
+  font: 400 clamp(16px, 4.4vmin, 28px) / 1 var(--f-news);
+  color: #fff;
+  background: #d10019;
+  letter-spacing: 0.05em;
+  z-index: 1;
+}
+.bn-crawl {
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.bn-track {
+  display: flex;
+  white-space: nowrap;
+  font: 400 clamp(16px, 4.4vmin, 28px) / 1 var(--f-news);
+  color: #111;
+  animation: crawl 22s linear infinite;
+}
+.bn-track span {
+  padding: 0 0.6em;
+}
+.bn-track i {
+  font-style: normal;
+  color: #d10019;
+}
+@keyframes crawl {
+  to { transform: translateX(-50%); }
+}
